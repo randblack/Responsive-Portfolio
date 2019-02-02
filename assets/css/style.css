@@ -19,6 +19,7 @@ body {
   border-bottom: 2px solid #cccccc;
   width: 100%;
   height: 75px;
+  z-index: 2;
 }
 
 #footer {
@@ -63,13 +64,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 75px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing:border-box;
 }
 
 #teal {
   color: #4aaaa5;
-  padding-left: 20px;
   padding-top: 20px;
 }
 
@@ -79,12 +80,13 @@ body {
 }
 
 .gallery {
-  width: 500px;
+  width: 75%;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 5px;
   grid-template-columns: auto auto;
   padding: 15px;
+  padding-left: 0;
   grid-column-gap: 15px;
   box-sizing:border-box;
 }
@@ -108,7 +110,7 @@ body {
   text-align: center;
   box-sizing:border-box;
   z-index: 1;
-  top: -22%;
+  bottom: 20%;
   padding: 4%;
 }
 
@@ -148,30 +150,28 @@ a:hover {
 }
 
 p {
-  padding: 20px;
   line-height: 25px;
 }
 
-hr {
-  border-top: 3px solid #777777;
+div.hr {
+  height: 3px;
+  background-color: #777777;
   width: 100%;
   opacity: 0.2;
-  margin-left: 20px;
-  margin-right: 50px;
   box-sizing:border-box;
 }
 
 form {
-  padding: 20px;
   line-height: 27px;
+  padding-bottom: 20px;
 }
 
 input[type=text] {
   width: 910px;
-  padding: 5px;
   border-style: solid;
   border-width: 1px;
   border-color: #d3d3d3;
+  box-sizing:border-box;
 }
 
 input[type=submit] {
@@ -184,10 +184,11 @@ input[type=submit] {
 }
 
 textarea {
-  width: 916px;
+  width: 910px;
   border-style: solid;
   border-width: 1px;
   border-color: #d3d3d3;
+  box-sizing:border-box;
 }
 
 .form {
@@ -195,12 +196,14 @@ textarea {
 }
 
 @media only screen and (max-width: 980px) {
+
   #content {
     width: 60%;
-    margin-left: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 125px;
     margin-bottom: 75px;
-    padding-right: 15px;
+    box-sizing:border-box;
   }
 
   hr {
@@ -211,7 +214,7 @@ textarea {
   #nav {
     width: 100%;
     margin: auto;
-    margin-left: 50px;
+    margin-left: 15px;
     margin-right: 25px;
   }
 
@@ -241,12 +244,9 @@ textarea {
   }
 
   .gallery {
-    width: 100%;
+    width: 103%;
     display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 5px;
     grid-template-columns: auto auto;
-    padding: 15px;
     grid-column-gap: 15px;
     box-sizing:border-box;
   }
@@ -270,18 +270,19 @@ textarea {
     text-align: center;
     box-sizing:border-box;
     z-index: 1;
-    top: -20%;
+    bottom: 22%;
     padding: 4%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #content {
-    width: 100%;
+    width: 95%;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 125px;
     margin-bottom: 75px;
+    box-sizing: border-box;
   }
 
   #nav {
@@ -294,7 +295,7 @@ textarea {
   #header {
     width: 100%;
     position: fixed;
-    top: 0
+    top: 0;
   }
 
   #links {
@@ -316,6 +317,15 @@ textarea {
     border-color: #d3d3d3;
   }
 
+  .gallery {
+    margin-top: 15px;
+    width: 102%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 15px;
+    box-sizing:border-box;
+  }
+
   .banner {
     position: relative;
     background-color: #4aaaa5;
@@ -331,7 +341,7 @@ textarea {
 
 @media only screen and (max-width: 640px) {
   #content {
-    width: 100%;
+    width: 95%;
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 145px;
@@ -395,7 +405,6 @@ textarea {
     text-align: center;
     box-sizing:border-box;
     z-index: 1;
-    top: -15%;
     padding: 4%;
   }
 }
