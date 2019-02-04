@@ -66,7 +66,7 @@ body {
   margin-bottom: 75px;
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 #teal {
@@ -79,44 +79,61 @@ body {
   padding-right: 20px;
 }
 
-.gallery {
-  width: 75%;
-  display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 5px;
-  grid-template-columns: auto auto;
-  padding: 15px;
-  padding-left: 0;
-  grid-column-gap: 15px;
-  box-sizing:border-box;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 15px;
 }
-
-.projectTile {
-  width: 100%;
-  height: auto;
-  box-sizing:border-box;
-}
-
-.thumbnail {
-  width: 100%;
-  height: auto;
-}
-
-.banner {
+.cell {
   position: relative;
+  width: 50%;
+  box-sizing:border-box;
+  margin: 10px;
+  width: calc(50% - 20px);
+}
+
+.box {
+  max-width: 500px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing:border-box;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+
+h2 {
+  position: absolute;
+  z-index: 1;
+  margin-right: 7.5px;
+  bottom: 0px;
   background-color: #4aaaa5;
   color: #fff;
   width: 100%;
   text-align: center;
-  box-sizing:border-box;
-  z-index: 1;
-  bottom: 20%;
   padding: 4%;
+  box-sizing:border-box;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  font-weight: 300;
+  font-size: 15pt;
 }
 
-span {
+.navDivider {
   opacity: 0.25;
 }
+
+/* .paddedRight {
+  padding-right:7.5px;
+}
+
+.paddedLeft {
+  padding-left:7.5px;
+} */
 
 h1 {
   font-family: 'Georgia', Times, Times New Roman, serif;
@@ -215,7 +232,7 @@ textarea {
     width: 100%;
     margin: auto;
     margin-left: 15px;
-    margin-right: 25px;
+    margin-right: 15px;
   }
 
   #header {
@@ -225,7 +242,7 @@ textarea {
   }
 
   #links {
-    margin-right: 75px;
+    margin-right: 25px;
   }
 
   input[type=text] {
@@ -243,23 +260,30 @@ textarea {
     border-color: #d3d3d3;
   }
 
-  .gallery {
-    width: 103%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 15px;
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .cell {
+    width: 50%;
+    margin: 10px;
+    width: calc(50% - 20px);
+  }
+
+  .box {
+    max-width: 500px;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 100%;
     box-sizing:border-box;
   }
   
-  .projectTile {
-    width: 100%;
-    height: auto;
-    box-sizing:border-box;
-  }
-  
-  .thumbnail {
-    width: 100%;
-    height: auto;
+  .responsive-image {
+    max-width: 100%;
   }
   
   .banner {
@@ -268,16 +292,16 @@ textarea {
     color: #fff;
     width: 100%;
     text-align: center;
-    box-sizing:border-box;
     z-index: 1;
-    bottom: 22%;
     padding: 4%;
+    bottom: 50px;
+    box-sizing:border-box;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #content {
-    width: 95%;
+    width: calc(100% - 30px);
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 125px;
@@ -317,13 +341,8 @@ textarea {
     border-color: #d3d3d3;
   }
 
-  .gallery {
-    margin-top: 15px;
-    width: 102%;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 15px;
-    box-sizing:border-box;
+  .box {
+    max-width: 100%;
   }
 
   .banner {
@@ -334,14 +353,14 @@ textarea {
     text-align: center;
     box-sizing:border-box;
     z-index: 1;
-    top: -20%;
+    bottom: 60px;
     padding: 4%;
   }
 }
 
 @media only screen and (max-width: 640px) {
   #content {
-    width: 95%;
+    width: calc(100% - 30px);
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 145px;
@@ -383,18 +402,31 @@ textarea {
     margin: 0;
   }
 
-  .gallery {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
     width: 100%;
-    display: grid;
-    grid-column-gap: 15px;
-    grid-template-columns: auto;
-    padding: 5px;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
+    
   }
 
-  .projectTile {
+  .box {
+    max-width: 100%;
+  }
+  
+  .container {
+    margin: 0 auto;
     width: 100%;
-    height: auto;
     box-sizing:border-box;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
   }
   
   .banner {
@@ -403,8 +435,9 @@ textarea {
     color: #fff;
     width: 100%;
     text-align: center;
-    box-sizing:border-box;
     z-index: 1;
     padding: 4%;
+    bottom: 80px;
+    box-sizing:border-box;
   }
 }
