@@ -76,7 +76,7 @@ body {
 
 #profile {
   float: left;
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .grid {
@@ -363,7 +363,7 @@ textarea {
     width: calc(100% - 30px);
     margin-left: 15px;
     margin-right: 15px;
-    margin-top: 145px;
+    margin-top: 140px;
     margin-bottom: 75px;
     padding: 15px;
   }
