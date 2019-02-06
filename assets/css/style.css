@@ -127,14 +127,6 @@ h2 {
   opacity: 0.25;
 }
 
-/* .paddedRight {
-  padding-right:7.5px;
-}
-
-.paddedLeft {
-  padding-left:7.5px;
-} */
-
 h1 {
   font-family: 'Georgia', Times, Times New Roman, serif;
   font-size: 20pt;
@@ -155,7 +147,7 @@ a:link {
 }
 
 a:visited {
-  color: rgba(0, 0, 0, 0.5);
+  color: #777777;
   text-decoration: none;
   padding: 8px;
 }
@@ -189,6 +181,7 @@ input[type=text] {
   border-width: 1px;
   border-color: #d3d3d3;
   box-sizing:border-box;
+  padding: 5px;
 }
 
 input[type=submit] {
